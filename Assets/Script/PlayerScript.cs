@@ -22,11 +22,7 @@ public class PlayerScript : MonoBehaviour, IInteractable
 
     public string GetDescription()
     {
-        if(nowHP>=70){colorHP="green";}
-        else if(nowHP>=40){colorHP="orange";}
-        else{colorHP="red";}
-        return string.Format("Name: You\n<color={0}>HP={1}/{2}</color>\n",
-                                                colorHP,nowHP,maxHP);   
+        return string.Format("Is you :)");   
     }
     public void Interact(){}
     void Start()

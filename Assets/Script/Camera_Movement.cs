@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Camera_Movement : MonoBehaviour
 {
-    public int speed = 5;
+    public int speed = 30;
     public GameObject Camera_Object;
+    public GameObject Camera;
+    public float CameraAngle = 60.0F;
     void Start()
     {
         
@@ -15,6 +17,19 @@ public class Camera_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float mw = Input.GetAxis("Mouse ScrollWheel");
+
+        if (mw < -0.1 && transform.position.y < 50f)
+        {
+            transform.position = transform.position + new Vector3(0, 0.5f, 0);
+            Camera.transform.Rotate(1f, 0, 0);
+        }
+        if (mw > 0.1 && transform.position.y > 15f)
+        {
+            transform.position = transform.position - new Vector3(0, 0.5f, 0);
+            Camera.transform.Rotate(-1f, 0, 0);
+        }
+
         if(Input.GetKey(KeyCode.W))
         {
             Camera_Object.transform.position += Camera_Object.transform.forward * speed * Time.deltaTime;

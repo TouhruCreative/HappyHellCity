@@ -47,7 +47,7 @@ public class MouseScript : MonoBehaviour
         
         // Z X C
         if(Place.collider){
-        if (Input.GetKeyUp(KeyCode.Z)){
+        if (Input.GetKeyUp(KeyCode.C)){
             
             if(Place.collider.tag == "Place" && Place.collider.GetComponent<Place_script>().canBuy == true){
                 if(Cash-1000>=0 && Material-1000>=0){
@@ -72,7 +72,7 @@ public class MouseScript : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyUp(KeyCode.C)){
+        if (Input.GetKeyUp(KeyCode.Z)){
             if(Place.collider.tag == "Place" && Place.collider.GetComponent<Place_script>().canBuy == true){
                 if(Cash-1000>=0 && Material-1000>=0){
                     Player.GetComponent<PlayerScript>().nowCash = Player.GetComponent<PlayerScript>().nowCash - 1000;
@@ -106,10 +106,14 @@ public class MouseScript : MonoBehaviour
                     TextUI.GetComponent<UnityEngine.UI.Text>().text="";
                     ImageUI.SetActive(false);
                     TextUI.SetActive(false);
-              
-
+                }
             }
-        }
+            else{
+                    TextUI.GetComponent<UnityEngine.UI.Text>().text="";
+                    ImageUI.SetActive(false);
+                    TextUI.SetActive(false);
+            }
+
     }
 }
 
