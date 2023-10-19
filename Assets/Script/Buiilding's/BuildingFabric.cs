@@ -43,4 +43,8 @@ public class BuildingFabric : MonoBehaviour
     private void Add_Material() {
         Player.GetComponent<PlayerScript>().nowMaterial = Player.GetComponent<PlayerScript>().nowMaterial + efficiency_now;
     }
+    public void SellPlace(){
+        Player.GetComponent<PlayerScript>().nowCash += 500;
+        Destroy(this);
+    }
 }

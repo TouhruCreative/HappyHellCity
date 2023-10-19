@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BuildingHouse : MonoBehaviour
 {
+    public GameObject Player;
     public float HappyNow;
     public float HappyMax = 100;
 
@@ -13,6 +14,7 @@ public class BuildingHouse : MonoBehaviour
 
     private List<GameObject> obj_list;
     void Start() {
+        Player = GameObject.FindWithTag("Player");
         obj_list = gameObject.GetComponentInParent<Place_script>().obj_list;
         HappyNow = HappyMax;
     }
@@ -30,5 +32,9 @@ public class BuildingHouse : MonoBehaviour
         HappyNow=HappyMax-polKoef;
         People=HappyNow*2;
         gameObject.GetComponentInParent<Place_script>().modifString="Happy Count: "+HappyNow.ToString()+"\nPeople: "+People.ToString();
+    }
+    public void SellPlace(){
+        Player.GetComponent<PlayerScript>().nowCash += 500;
+        Destroy(this);
     }
 }
