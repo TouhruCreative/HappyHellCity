@@ -47,7 +47,11 @@ public class BuildingEconomic : MonoBehaviour
         Profit = modifProfit - MinusModifProfit;
     }
     public void SellPlace(){
-        Player.GetComponent<PlayerScript>().nowCash += 500;
-        Destroy(this);
+        CancelInvoke("Add_Money");
+        CancelInvoke("Update_Profit");
+        this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().canBuy = true;
+        this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().namethis = "Free Place";
+        
+        Destroy(this.gameObject);
     }
 }

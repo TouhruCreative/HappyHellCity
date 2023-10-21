@@ -34,7 +34,9 @@ public class BuildingHouse : MonoBehaviour
         gameObject.GetComponentInParent<Place_script>().modifString="Happy Count: "+HappyNow.ToString()+"\nPeople: "+People.ToString();
     }
     public void SellPlace(){
-        Player.GetComponent<PlayerScript>().nowCash += 500;
-        Destroy(this);
+        this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().canBuy = true;
+        this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().namethis = "Free Place";
+        
+        Destroy(this.gameObject);
     }
 }

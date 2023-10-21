@@ -97,19 +97,23 @@ public class MouseScript : MonoBehaviour
         //2 3
         //Up Sell
 
-        void sell(){
-            if(Place.collider.transform.GetChild(0).GetComponent<BuildingEconomic>()){
-                Place.collider.transform.GetChild(0).GetComponent<BuildingEconomic>().SellPlace();
-            } else if(Place.collider.transform.GetChild(0).GetComponent<BuildingFabric>()){
-                Place.collider.transform.GetChild(0).GetComponent<BuildingFabric>().SellPlace();
-            } else if(Place.collider.transform.GetChild(0).GetComponent<BuildingHouse>()){
-                Place.collider.transform.GetChild(0).GetComponent<BuildingHouse>().SellPlace();
+        btnSell.onClick.AddListener(sell);
+    }
+    public void sell(){
+            if(Place.collider.transform.GetChild(1).GetComponent<BuildingEconomic>()){
+               
+                Place.collider.transform.GetChild(1).GetComponent<BuildingEconomic>().SellPlace();
+
+            } else if(Place.collider.transform.GetChild(1).GetComponent<BuildingFabric>()){
+                
+                Place.collider.transform.GetChild(1).GetComponent<BuildingFabric>().SellPlace();
+
+            } else if(Place.collider.transform.GetChild(1).GetComponent<BuildingHouse>()){
+
+                Place.collider.transform.GetChild(1).GetComponent<BuildingHouse>().SellPlace();
+
             }
         }
-
-        btnSell.onClick.AddListener(sell);
-
-    }
     public void Buy(){
         if(Place.collider){
             if(Place.collider.GetComponent<Place_script>().canBuy == true){

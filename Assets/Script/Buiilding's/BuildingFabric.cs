@@ -44,7 +44,11 @@ public class BuildingFabric : MonoBehaviour
         Player.GetComponent<PlayerScript>().nowMaterial = Player.GetComponent<PlayerScript>().nowMaterial + efficiency_now;
     }
     public void SellPlace(){
-        Player.GetComponent<PlayerScript>().nowCash += 500;
-        Destroy(this);
+        CancelInvoke("Add_Material");
+        CancelInvoke("Update_pollution");
+        this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().canBuy = true;
+        this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().namethis = "Free Place";
+        
+        Destroy(this.gameObject);
     }
 }
