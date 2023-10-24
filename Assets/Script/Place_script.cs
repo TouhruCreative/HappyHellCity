@@ -6,6 +6,7 @@ public class Place_script : MonoBehaviour, IInteractable
 {
     public string namethis = "Free Place";
     public bool canBuy=true;
+    public bool canModif=false;
     public string discription;
     public string modifString;
     
@@ -18,5 +19,6 @@ public class Place_script : MonoBehaviour, IInteractable
     }
     public void Interact(){
         canBuy = false;
+        canModif =true;
     }
 }

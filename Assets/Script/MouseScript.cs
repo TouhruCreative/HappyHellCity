@@ -15,8 +15,8 @@ public class MouseScript : MonoBehaviour
         public GameObject ImageUI;
         public GameObject SelObj;
 
-        public Button btnUpdate;
-        public Button btnSell;
+        public GameObject btnCanvasUpgrade;
+        public GameObject btnBuy;
     #endregion
 
     #region Building's prefabs
@@ -45,11 +45,7 @@ public class MouseScript : MonoBehaviour
     void Start()
     {
         myTransform = transform;                    // sets myTransform to this GameObject.transform
-        ImageUI.SetActive(false);
-        TextUI.SetActive(false);
         SelObj.SetActive(false);
-        btnUpdate = SelObj.transform.GetChild(2).GetComponent<Button>();
-        btnSell   = SelObj.transform.GetChild(3).GetComponent<Button>();
     }
  
     void Update()
@@ -59,6 +55,13 @@ public class MouseScript : MonoBehaviour
         if(Place.collider){
             if(Place.collider.tag != "cantShow"){
                 TextUI.GetComponent<UnityEngine.UI.Text>().text=Place.collider.GetComponent<IInteractable>().GetDescription();
+                if(Place.collider.GetComponent<Place_script>().canModif){
+                        btnCanvasUpgrade.SetActive(true);
+                        btnBuy.SetActive(false);
+                } else {
+                        btnCanvasUpgrade.SetActive(false);
+                        btnBuy.SetActive(true);
+                }
             }
         }
         Plane playerPlane = new Plane(Vector3.up, myTransform.position);
@@ -72,21 +75,15 @@ public class MouseScript : MonoBehaviour
                     Place = hit;
                     IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                     TextUI.GetComponent<UnityEngine.UI.Text>().text=interactable.GetDescription();
-                    ImageUI.SetActive(true);
-                    TextUI.SetActive(true);
                     SelObj.SetActive(true);
                 }//end(if can show object)
                 else{//else(if can show object)
                     TextUI.GetComponent<UnityEngine.UI.Text>().text="";
-                    ImageUI.SetActive(false);
-                    TextUI.SetActive(false);
                     SelObj.SetActive(false);
                 }//end else(if can show object)
             }//end(if Raycast)
             else{//else (if Raycast)
                 TextUI.GetComponent<UnityEngine.UI.Text>().text="";
-                ImageUI.SetActive(false);
-                TextUI.SetActive(false);
                 SelObj.SetActive(false);
         }//end(else (if Raycast))
         }//end(if click)
@@ -97,22 +94,24 @@ public class MouseScript : MonoBehaviour
         //2 3
         //Up Sell
 
-        btnSell.onClick.AddListener(sell);
+        //btnSell.onClick.AddListener(sell);
     }
     public void sell(){
-            if(Place.collider.transform.GetChild(1).GetComponent<BuildingEconomic>()){
+        if(Place.collider){
+            if(Place.collider.transform.GetChild(1).transform.GetComponent<BuildingEconomic>()){
                
-                Place.collider.transform.GetChild(1).GetComponent<BuildingEconomic>().SellPlace();
+                Place.collider.transform.GetChild(1).transform.GetComponent<BuildingEconomic>().SellPlace();
 
-            } else if(Place.collider.transform.GetChild(1).GetComponent<BuildingFabric>()){
+            } else if(Place.collider.transform.GetChild(1).transform.GetComponent<BuildingFabric>()){
                 
-                Place.collider.transform.GetChild(1).GetComponent<BuildingFabric>().SellPlace();
+                Place.collider.transform.GetChild(1).transform.GetComponent<BuildingFabric>().SellPlace();
 
-            } else if(Place.collider.transform.GetChild(1).GetComponent<BuildingHouse>()){
+            } else if(Place.collider.transform.GetChild(1).transform.GetComponent<BuildingHouse>()){
 
-                Place.collider.transform.GetChild(1).GetComponent<BuildingHouse>().SellPlace();
+                Place.collider.transform.GetChild(1).transform.GetComponent<BuildingHouse>().SellPlace();
 
             }
+        }
         }
     public void Buy(){
         if(Place.collider){
@@ -123,6 +122,8 @@ public class MouseScript : MonoBehaviour
             }
         }
     }
+
+    
 
     public void CloseMenu(){
         BuyMenu.SetActive(false);
