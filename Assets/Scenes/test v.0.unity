@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -273,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -683,6 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -1889,6 +1892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -2090,6 +2094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -2358,11 +2363,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextUI: {fileID: 709301719}
   ImageUI: {fileID: 1289340739}
+  SelObj: {fileID: 0}
+  btnCanvasUpgrade: {fileID: 0}
+  btnBuy: {fileID: 0}
   Home: {fileID: 5377869226077199355, guid: 2de3e8883dc7ccc479632eccce59c77f, type: 3}
   Fabric: {fileID: 4103120083115192684, guid: d00b964b3db5b244d854faa9c6f74dfa, type: 3}
   Economic: {fileID: 6509268616392503809, guid: b72f574b99c702c4c82ac72a0715e556,
     type: 3}
   Player: {fileID: 1567603014}
+  BuyMenu: {fileID: 0}
+  BuyList: []
 --- !u!114 &1542052972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,6 +2438,9 @@ MonoBehaviour:
   TextCash: {fileID: 2088107479}
   nowMaterial: 10000
   TextMaterial: {fileID: 1816606602}
+  nowHappy: 0
+  TextHappy: {fileID: 0}
+  NN: {fileID: 0}
 --- !u!4 &1567603016
 Transform:
   m_ObjectHideFlags: 0
@@ -2781,6 +2794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -3244,6 +3258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -3439,6 +3454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -3776,6 +3792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:
@@ -4108,6 +4125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namethis: Free Place
   canBuy: 1
+  canModif: 0
   discription: 
   modifString: 
   obj_list:

@@ -4,8 +4,17 @@ using UnityEngine;
 
 public interface IBuilding
 {
-    List<GameObject> obj_list();
-    GameObject Player();
-    void SetDefualtValue();
+    //Building's
     void SellPlace();
+    string[] xy { get; set; }
+
+    //Upgrade
+    float priceUpgradeModifOne { get; set; }
+    float priceUpgradeModifTwo { get; set; }
+    void UpgradeModifer();
+    void UpgradeModiferTwo();
+    List<string> descUpgradeModiferOne { get; set; }
+    List<string> descUpgradeModiferTwo { get; set; }
+    float ModifOne { get; set; }
+    float ModifTwo { get; set; }
 }

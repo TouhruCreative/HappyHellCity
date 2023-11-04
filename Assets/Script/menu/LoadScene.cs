@@ -9,9 +9,16 @@ public class LoadScene : MonoBehaviour
 {
     public GameObject LoadingScreen;
     public Slider scale;
-    public void Loading(){
+    public void PlayNewGame(){
+        PlayerPrefs.SetInt("NewGame",0);
         LoadingScreen.SetActive(true);
         StartCoroutine(LoadAsync());
+    }
+    public void PlayGame(){
+        if(PlayerPrefs.GetInt("NewGame")==1){
+            LoadingScreen.SetActive(true);
+            StartCoroutine(LoadAsync());
+        }
     }
     IEnumerator LoadAsync(){
         AsyncOperation loadAsync = SceneManager.LoadSceneAsync(1);

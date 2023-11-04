@@ -2,36 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingEconomic : MonoBehaviour
+public class BuildingEconomic : MonoBehaviour, IBuilding
 {
+    public List<string> descUpgradeModiferOne { get; set; }
+    public List<string> descUpgradeModiferTwo { get; set; }
+    public float priceUpgradeModifOne { get; set; }
+    public float priceUpgradeModifTwo { get; set; }
+    public float ModifOne { get; set; }
+    public float ModifTwo { get; set; }
+    public string[] xy { get; set; }
+
     public GameObject Player;
+    public GameObject PauseObject;
     public float Profit;
     public float modifProfit;
     public float MinusModifProfit;
-    public float upgradeModifer=1f;
 
     private List<GameObject> obj_list;
     private bool canGiveCash=true;
+    public string[] a;
 
-    public float ModifDelay=30;
+    public string name1;
     void Start()
     {
-        upgradeModifer=1f;
+        priceUpgradeModifOne=1000.0f;
+        priceUpgradeModifTwo=1000.0f;
+        ModifOne=1.0f;
+        ModifTwo=15f;
         Player = GameObject.FindWithTag("Player");
-        obj_list = gameObject.GetComponentInParent<Place_script>().obj_list;
-        InvokeRepeating("Add_Money", 0, ModifDelay);
+        PauseObject=GameObject.FindWithTag("PauseObject");
+        InvokeRepeating("Add_Money", 0, ModifTwo);
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponentInParent<Place_script>().modifString="Profit: "+Profit.ToString()+"\n"+upgradeModifer.ToString();
+        obj_list = gameObject.GetComponentInParent<Place_script>().obj_list;
+        gameObject.GetComponentInParent<Place_script>().modifString="Profit: "+Profit.ToString();
+        xy = gameObject.GetComponentInParent<Place_script>().GetCoord();
         Update_Profit();
+        descUpgradeModiferOne= new List<string>{
+            "Upgrade profit",
+            $"+{0.25f} bonus\n(current bonus: {ModifOne})\n\nprice: {priceUpgradeModifOne}"
+        };
+        descUpgradeModiferTwo= new List<string>{
+            "Upgrade profit delay",
+            $"-{0.05f} profit delay\n(current price delay: {ModifTwo})\n\nprice: {priceUpgradeModifTwo}"};
     }
 
     private void Add_Money() {
-        if(canGiveCash==true){
-            Player.GetComponent<PlayerScript>().nowCash += Profit/2;//Player.GetComponent<PlayerScript>().nowCash
+        if(canGiveCash==true && PauseObject.GetComponent<Pause>().itTime == true){
+            Player.GetComponent<PlayerScript>().nowCash += Profit/2;
         }
     }
     private void Update_Profit(){
@@ -49,15 +70,10 @@ public class BuildingEconomic : MonoBehaviour
                     }
             }
         }
-        Profit = (modifProfit - MinusModifProfit) * upgradeModifer;
-    }
-    private void cancelInvoke(){
-        canGiveCash=false;
-        CancelInvoke("Add_Money");
+        Profit = (modifProfit - MinusModifProfit) * ModifOne;
     }
 
     public void SellPlace(){
-        cancelInvoke();
         this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().canBuy = true;
         this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().namethis = "Free Place";
         
@@ -65,19 +81,17 @@ public class BuildingEconomic : MonoBehaviour
     }
 
     public void UpgradeModifer(){
-        upgradeModifer+=1f;
-        cancelInvoke();
-        InvokeRepeating("Add_Money", 0, ModifDelay);
+        canGiveCash=false;
+        ModifOne=ModifOne+0.25f;
         canGiveCash=true;
     }
-    public string nameUpgradeModifer="Upgrade profit";
-    public string descUpgradeModifer="Upgrade profit";
-    public string descUpgradeModiferTime="Upgrade profit";
-    public string nameUpgradeModiferTime="Upgrade time";
 
-    public void UpgradeModiferTime(){
-        cancelInvoke();
-        InvokeRepeating("Add_Money", 0, ModifDelay);
+    public void UpgradeModiferTwo(){
+        CancelInvoke();
+        canGiveCash=false;
+        ModifTwo=ModifTwo-0.05f;
+        InvokeRepeating("Add_Money", 0, ModifTwo);
         canGiveCash=true;
     }
+    
 }
