@@ -6,8 +6,10 @@ public class Pause : MonoBehaviour
 {
     public bool itTime = true;
     public GameObject PauseObject;
+    public GameObject SettingsInPauseObject;
     void Start(){
         PauseObject.SetActive(false);
+        SettingsInPauseObject.SetActive(false);
     }
     void Update()
     {
@@ -23,6 +25,7 @@ public class Pause : MonoBehaviour
         itTime = true;
         Time.timeScale = 1.0f;
         PauseObject.SetActive(false);
+        SettingsInPauseObject.SetActive(false);
     }
     public void TimeStop(){
         itTime = false;
