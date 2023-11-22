@@ -19,7 +19,7 @@ public class Settings : MonoBehaviour
     void Start()
     {
         isFullscreen = true;
-        Screen.SetResolution(1280, 720, true, 60);
+        //Screen.SetResolution(1280, 720, true, 60);
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
         resolutions = Screen.resolutions;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadScript : MonoBehaviour
 {
@@ -91,6 +92,10 @@ public class SaveLoadScript : MonoBehaviour
     public void SaveAndQuit(){
         SaveAllData();
         Application.Quit();
+    }
+    public void SaveAndQuitToTitle(){
+        SaveAllData();
+        SceneManager.LoadScene(0);
     }
 }
 [System.Serializable]
