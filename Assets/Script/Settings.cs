@@ -9,7 +9,7 @@ public class Settings : MonoBehaviour
 {
     public float volume = 0; //Громкость
     public int quality = 0; //Качество
-    private bool isFullscreen; //Полноэкранный режим
+    public bool isFullscreen; //Полноэкранный режим
     public AudioMixer audioMixer; //Регулятор громкости
     public Dropdown resolutionDropdown; //Список с разрешениями для игры
     private Resolution[] resolutions; //Список доступных разрешений
@@ -18,7 +18,7 @@ public class Settings : MonoBehaviour
     
     void Start()
     {
-        isFullscreen = true;
+        isFullscreen = Screen.fullScreen;
         //Screen.SetResolution(1280, 720, true, 60);
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();

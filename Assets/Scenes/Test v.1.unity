@@ -17078,7 +17078,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1136029061}
         m_MethodName: ChangeFullscreenMode
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -19695,6 +19695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: 0
   quality: 0
+  isFullscreen: 0
   audioMixer: {fileID: 0}
   resolutionDropdown: {fileID: 269814257}
 --- !u!1 &1147681212

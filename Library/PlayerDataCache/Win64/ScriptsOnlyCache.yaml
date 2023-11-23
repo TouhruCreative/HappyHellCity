@@ -16,7 +16,6 @@ ScriptsOnlyBuild:
     - SaveLoadScript
     - Settings
     - UpgradeMenu
-    - menuScript
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -80,8 +79,6 @@ ScriptsOnlyBuild:
     - Class: 81
       Script: {instanceID: 0}
     - Class: 84
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -190,6 +187,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -205,9 +204,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11596}
     - Class: 114
+      Script: {instanceID: 11600}
+    - Class: 114
+      Script: {instanceID: 12034}
+    - Class: 114
       Script: {instanceID: 12154}
     - Class: 114
       Script: {instanceID: 12202}
+    - Class: 114
+      Script: {instanceID: 12442}
     - Class: 114
       Script: {instanceID: 12748}
     - Class: 114
@@ -217,13 +222,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13512}
-    - Class: 114
       Script: {instanceID: 13674}
+    - Class: 114
+      Script: {instanceID: 13700}
     - Class: 114
       Script: {instanceID: 13828}
     - Class: 114
+      Script: {instanceID: 13942}
+    - Class: 114
       Script: {instanceID: 13962}
+    - Class: 114
+      Script: {instanceID: 13984}
     - Class: 114
       Script: {instanceID: 14010}
     - Class: 115
@@ -869,7 +878,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 001bc787fe143f0fa619d8158b4a8175
+      Hash: 0ec6cd676271ccc3971fa014f79f411e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Settings
@@ -1021,4 +1030,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Test v.1.unity
-  playerPath: D:/Proggraming/Unity project/TestBuildBeta v.0.8.2.9/HappyHellCity.exe
+  playerPath: D:/Proggraming/Unity project/TestBuildBeta v.0.8.3/HappyHellCity.exe
