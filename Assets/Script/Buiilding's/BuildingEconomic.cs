@@ -23,6 +23,8 @@ public class BuildingEconomic : MonoBehaviour, IBuilding
     public string[] a;
 
     public string name1;
+    public GameObject PlaceEffect;
+    private GameObject pe;
     void Start()
     {
         priceUpgradeModifOne=1000.0f;
@@ -32,9 +34,11 @@ public class BuildingEconomic : MonoBehaviour, IBuilding
         Player = GameObject.FindWithTag("Player");
         PauseObject=GameObject.FindWithTag("PauseObject");
         InvokeRepeating("Add_Money", 0, ModifTwo);
+        GetComponent<Animator>().SetBool("start", true);
+        pe=Instantiate(PlaceEffect,transform.position,Quaternion.identity);
+        Invoke("StartPlaceEffect",1f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         obj_list = gameObject.GetComponentInParent<Place_script>().obj_list;
@@ -94,4 +98,7 @@ public class BuildingEconomic : MonoBehaviour, IBuilding
         canGiveCash=true;
     }
     
+    private void StartPlaceEffect(){
+        Destroy(pe);
+    }
 }

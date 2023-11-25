@@ -1030,4 +1030,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Test v.1.unity
-  playerPath: D:/Proggraming/Unity project/TestBuildBeta v.0.8.3/HappyHellCity.exe
+  playerPath: D:/Proggraming/Unity project/TestBuildBeta v.0.8.3.5/HappyHellCity.exe

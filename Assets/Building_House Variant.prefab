@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &4980704520162796486
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377869226077199355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50eb69fcff0c49e4fa119a55ee10a534, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1338739717806271224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,5 +86,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_House Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7726142376992837628, guid: 27f9e9dd6a4dab643ad1ecf7b4d02206,
+        type: 3}
+      propertyPath: PlaceEffect
+      value: 
+      objectReference: {fileID: 8688638796297039462, guid: ee5d1c44f0db47b4a9ba056efcb2dda5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f9e9dd6a4dab643ad1ecf7b4d02206, type: 3}
+--- !u!1 &5377869226077199355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6356319872956936451, guid: 27f9e9dd6a4dab643ad1ecf7b4d02206,
+    type: 3}
+  m_PrefabInstance: {fileID: 1338739717806271224}
+  m_PrefabAsset: {fileID: 0}

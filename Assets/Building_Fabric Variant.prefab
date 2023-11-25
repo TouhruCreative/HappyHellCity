@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &1604853430511431757
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103120083115192684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50eb69fcff0c49e4fa119a55ee10a534, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6077027788783100484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12,6 +31,12 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7458917578284869126, guid: 04efb6846e5c9f342921e7b3b355a4fc,
+        type: 3}
+      propertyPath: PlaceEffect
+      value: 
+      objectReference: {fileID: 7567591573328808117, guid: 6c0db26509acc4740b23694cedf14c33,
+        type: 3}
     - target: {fileID: 7489228649698314642, guid: 04efb6846e5c9f342921e7b3b355a4fc,
         type: 3}
       propertyPath: m_RootOrder
@@ -70,7 +95,13 @@ PrefabInstance:
     - target: {fileID: 7828599112948912936, guid: 04efb6846e5c9f342921e7b3b355a4fc,
         type: 3}
       propertyPath: m_Name
-      value: Building_Fabric
+      value: Building_Fabric Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04efb6846e5c9f342921e7b3b355a4fc, type: 3}
+--- !u!1 &4103120083115192684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7828599112948912936, guid: 04efb6846e5c9f342921e7b3b355a4fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 6077027788783100484}
+  m_PrefabAsset: {fileID: 0}

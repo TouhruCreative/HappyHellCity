@@ -8,6 +8,7 @@ public class BuildingFabric : MonoBehaviour, IBuilding
     
     public GameObject Player;
     public GameObject PauseObject;
+    public GameObject PlaceEffect;
     public float efficiency_max =100;
     public float pollution_max  =30;
     private bool canGive=true;
@@ -15,6 +16,7 @@ public class BuildingFabric : MonoBehaviour, IBuilding
     public float efficiency_now;
     public float pollution_now;
     private List<GameObject> obj_list;
+    private GameObject pe;
 
     public List<string> descUpgradeModiferOne { get; set; }
     public List<string> descUpgradeModiferTwo { get; set; }
@@ -23,7 +25,6 @@ public class BuildingFabric : MonoBehaviour, IBuilding
     public float ModifOne { get; set; }
     public float ModifTwo { get; set; }
     public string[] xy { get; set; }
-
 
     void Start()
     {
@@ -36,7 +37,9 @@ public class BuildingFabric : MonoBehaviour, IBuilding
         obj_list = gameObject.GetComponentInParent<Place_script>().obj_list;
         ModifTwo=15.0f;
         InvokeRepeating("Add_Material", 0, ModifTwo);
-        
+        GetComponent<Animator>().SetBool("start", true);
+        pe=Instantiate(PlaceEffect,transform.position,Quaternion.identity);
+        Invoke("StartPlaceEffect",1f);
     }
     void Update()
     {
@@ -77,5 +80,8 @@ public class BuildingFabric : MonoBehaviour, IBuilding
         ModifTwo=ModifTwo-0.05f;
         InvokeRepeating("Add_Material", 0, ModifTwo);
         canGive=true;
+    }
+    private void StartPlaceEffect(){
+        Destroy(pe);
     }
 }

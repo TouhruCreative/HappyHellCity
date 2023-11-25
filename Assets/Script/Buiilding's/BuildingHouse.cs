@@ -24,6 +24,8 @@ public class BuildingHouse : MonoBehaviour, IBuilding
     public float upgradeModifer;
 
     private List<GameObject> obj_list;
+    public GameObject PlaceEffect;
+    private GameObject pe;
     void Start() {
 
         ModifTwo=1.05f;
@@ -33,6 +35,9 @@ public class BuildingHouse : MonoBehaviour, IBuilding
         obj_list = gameObject.GetComponentInParent<Place_script>().obj_list;
         HappyNow = HappyMax;
         upgradeModifer=5.0f;
+        GetComponent<Animator>().SetBool("start", true);
+        pe=Instantiate(PlaceEffect,transform.position,Quaternion.identity);
+        Invoke("StartPlaceEffect",1f);
     }
     void Update()
     {
@@ -71,5 +76,8 @@ public class BuildingHouse : MonoBehaviour, IBuilding
     }
     public void UpgradeModiferTwo(){
         ModifTwo=ModifTwo+0.05f;
+    }
+    private void StartPlaceEffect(){
+        Destroy(pe);
     }
 }
