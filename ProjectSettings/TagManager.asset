@@ -10,6 +10,7 @@ TagManager:
   - NN
   - PlaceAll
   - PauseObject
+  - EasterEgg
   layers:
   - Default
   - TransparentFX

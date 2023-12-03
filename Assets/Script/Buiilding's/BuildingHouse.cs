@@ -68,7 +68,7 @@ public class BuildingHouse : MonoBehaviour, IBuilding
     public void SellPlace(){
         this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().canBuy = true;
         this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().namethis = "Free Place";
-        
+        this.gameObject.transform.parent.gameObject.GetComponent<Place_script>().modifString = "";
         Destroy(this.gameObject);
     }
     public void UpgradeModifer(){
