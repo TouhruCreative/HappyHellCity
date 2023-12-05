@@ -12,12 +12,14 @@ public class LoadScene : MonoBehaviour
     public void PlayNewGame(){
         PlayerPrefs.SetInt("NewGame",0);
         LoadingScreen.SetActive(true);
-        StartCoroutine(LoadAsync());
+        SceneManager.LoadScene(1);
+        // StartCoroutine(LoadAsync());
     }
     public void PlayGame(){
         if(PlayerPrefs.GetInt("NewGame")==1){
             LoadingScreen.SetActive(true);
-            StartCoroutine(LoadAsync());
+            SceneManager.LoadScene(1);
+            //StartCoroutine(LoadAsync());
         }
     }
     IEnumerator LoadAsync(){
@@ -26,7 +28,7 @@ public class LoadScene : MonoBehaviour
         while(!loadAsync.isDone){
             scale.value = loadAsync.progress;
             if(loadAsync.progress >= .9f && !loadAsync.allowSceneActivation){
-                yield return new WaitForSeconds(2.2f);
+                yield return new WaitForSeconds(1f);
                 loadAsync.allowSceneActivation = true;
             }
             yield return null;

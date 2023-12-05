@@ -134,27 +134,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13474}
+      Script: {instanceID: 13450}
     - Class: 114
-      Script: {instanceID: 13532}
+      Script: {instanceID: 13476}
     - Class: 114
-      Script: {instanceID: 13560}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13572}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 13574}
     - Class: 114
-      Script: {instanceID: 13940}
+      Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 13958}
+      Script: {instanceID: 13942}
     - Class: 114
-      Script: {instanceID: 13980}
+      Script: {instanceID: 13960}
     - Class: 114
-      Script: {instanceID: 14006}
+      Script: {instanceID: 13982}
     - Class: 114
-      Script: {instanceID: 14038}
+      Script: {instanceID: 14008}
     - Class: 114
-      Script: {instanceID: 66730}
+      Script: {instanceID: 14040}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -249,19 +249,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 13702}
     - Class: 114
-      Script: {instanceID: 13826}
+      Script: {instanceID: 13828}
     - Class: 114
-      Script: {instanceID: 13940}
+      Script: {instanceID: 13942}
     - Class: 114
-      Script: {instanceID: 13958}
+      Script: {instanceID: 13960}
     - Class: 114
-      Script: {instanceID: 13980}
+      Script: {instanceID: 13982}
     - Class: 114
-      Script: {instanceID: 14006}
+      Script: {instanceID: 14008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -811,6 +811,12 @@ ScriptsOnlyBuild:
     className: SkewTextExample
   - hash:
       serializedVersion: 2
+      Hash: 5a119026a73921dce100ee29a7d1260b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: pentagram
+  - hash:
+      serializedVersion: 2
       Hash: fe2d355deb0ca31d59a0a7cf4d141fc3
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1037,14 +1043,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 5a119026a73921dce100ee29a7d1260b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: pentagram
   platform: 19
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Test v.1.unity
-  playerPath: D:/Proggraming/Unity project/TestBuildBeta v.0.8.5/HappyHellCity.exe
+  playerPath: D:/Proggraming/Unity project/Beta v.0.8.5.2/HappyHellCity.exe

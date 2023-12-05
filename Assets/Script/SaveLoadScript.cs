@@ -95,7 +95,21 @@ public class SaveLoadScript : MonoBehaviour
     }
     public void SaveAndQuitToTitle(){
         SaveAllData();
+        //StartCoroutine(desUnloadAsync());
+        //StartCoroutine(LoadAsync());
         SceneManager.LoadScene(0);
+    }
+    IEnumerator LoadAsync(){
+        AsyncOperation loadAsync = SceneManager.LoadSceneAsync(0);
+        loadAsync.allowSceneActivation = false;
+        while(!loadAsync.isDone){
+            //scale.value = loadAsync.progress;
+            if(loadAsync.progress >= .9f && !loadAsync.allowSceneActivation){
+                yield return new WaitForSeconds(1f);
+                loadAsync.allowSceneActivation = true;
+            }
+            yield return null;
+        }
     }
 }
 [System.Serializable]
