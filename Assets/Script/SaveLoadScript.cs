@@ -64,6 +64,8 @@ public class SaveLoadScript : MonoBehaviour
                                 TempObject.transform.GetComponent<IBuilding>().priceUpgradeModifOne = item.priceUpgradeModifOne;
                                 TempObject.transform.GetComponent<IBuilding>().priceUpgradeModifTwo = item.priceUpgradeModifTwo;
                                 TempObject.transform.SetParent(i.transform);
+                                i.transform.GetComponent<IInteractable>().Interact();
+                                i.transform.GetComponent<Place_script>().namethis = "Shop";
                                 break;
                             case 1:
                                 TempObject=Instantiate(Home, new Vector3(item.position[0], item.position[1], item.position[2]), Quaternion.identity);
@@ -72,6 +74,8 @@ public class SaveLoadScript : MonoBehaviour
                                 TempObject.transform.GetComponent<IBuilding>().priceUpgradeModifOne = item.priceUpgradeModifOne;
                                 TempObject.transform.GetComponent<IBuilding>().priceUpgradeModifTwo = item.priceUpgradeModifTwo;
                                 TempObject.transform.SetParent(i.transform);
+                                i.transform.GetComponent<IInteractable>().Interact();
+                                i.transform.GetComponent<Place_script>().namethis = "House";
                                 break;
                             case 2:
                                 TempObject=Instantiate(Fabric, new Vector3(item.position[0], item.position[1], item.position[2]), Quaternion.identity);
@@ -80,6 +84,8 @@ public class SaveLoadScript : MonoBehaviour
                                 TempObject.transform.GetComponent<IBuilding>().priceUpgradeModifOne = item.priceUpgradeModifOne;
                                 TempObject.transform.GetComponent<IBuilding>().priceUpgradeModifTwo = item.priceUpgradeModifTwo;
                                 TempObject.transform.SetParent(i.transform);
+                                i.transform.GetComponent<IInteractable>().Interact();
+                                i.transform.GetComponent<Place_script>().namethis = "Fabric";
                                 break;
                         }
                     }

@@ -43,9 +43,9 @@ public class UpgradeMenu : MonoBehaviour
                 viewObjectSetActive(false,false,true);
             }
             LeftButtonName.GetComponent<UnityEngine.UI.Text>().text=Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().descUpgradeModiferOne[0];
-            LeftButtonDesc.GetComponent<UnityEngine.UI.Text>().text=Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().descUpgradeModiferOne[1];
+            LeftButtonDesc.GetComponent<UnityEngine.UI.Text>().text=Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().descUpgradeModiferOne[1];//+"\n"+Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().priceUpgradeModifOne.ToString();
             RightButtonName.GetComponent<UnityEngine.UI.Text>().text=Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().descUpgradeModiferTwo[0];
-            RightButtonDesc.GetComponent<UnityEngine.UI.Text>().text=Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().descUpgradeModiferTwo[1];
+            RightButtonDesc.GetComponent<UnityEngine.UI.Text>().text=Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().descUpgradeModiferTwo[1];//+"\n"+Place.collider.transform.GetChild(1).transform.GetComponent<IBuilding>().priceUpgradeModifTwo.ToString();
         }
     }
     private bool canBuy(float need){

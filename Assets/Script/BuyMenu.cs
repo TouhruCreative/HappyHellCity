@@ -60,17 +60,17 @@ public class BuyMenu : MonoBehaviour
             imgFabric.SetActive(true);
         }
     }
-    private bool canBuyPlace(List<GameObject> List, string name){
-        foreach (GameObject i in List)
+    //Place.collider.GetComponent<Place_script>()
+    private bool canBuyPlace(List<GameObject> List, string name, string[] coord){
+        foreach (GameObject item in List)
         {
-            foreach (GameObject item in i.transform.GetComponent<Place_script>().obj_list)
-            {  
-                if(item.transform.childCount==2){
+            if(item.transform.childCount==2){
                     if(item.transform.GetComponent<Place_script>().namethis == name){
-                        return false;
+                        if(item.transform.GetComponent<Place_script>().GetCoord() != coord)
+                            return false;
                     }
                 }
-            }
+
         }
         return true;
     }
@@ -86,7 +86,7 @@ public class BuyMenu : MonoBehaviour
     public void BuyShop(){
         if(Place.collider){
             List<GameObject> Pcobjlst = new List<GameObject>(Place.collider.GetComponent<Place_script>().obj_list);
-            if(canBuyPlace(Pcobjlst, "Shop")){
+            if(canBuyPlace(Pcobjlst, "Shop",Place.collider.GetComponent<Place_script>().GetCoord())){
                 if(Cash-priceCashEconomic>=0 && Material-priceMaterialEconomic>=0){
                     Player.GetComponent<PlayerScript>().nowCash = Player.GetComponent<PlayerScript>().nowCash - priceCashEconomic;
                     Player.GetComponent<PlayerScript>().nowMaterial = Player.GetComponent<PlayerScript>().nowMaterial - priceMaterialEconomic;
@@ -104,7 +104,7 @@ public class BuyMenu : MonoBehaviour
     public void BuyHouse(){
         if(Place.collider){
             List<GameObject> Pcobjlst = new List<GameObject>(Place.collider.GetComponent<Place_script>().obj_list);
-            if(canBuyPlace(Pcobjlst, "House")){
+            if(canBuyPlace(Pcobjlst, "House",Place.collider.GetComponent<Place_script>().GetCoord())){
                 if(Cash-priceCashHouse>=0 && Material-priceMaterialHouse>=0){
                     Player.GetComponent<PlayerScript>().nowCash = Player.GetComponent<PlayerScript>().nowCash - priceCashHouse;
                     Player.GetComponent<PlayerScript>().nowMaterial = Player.GetComponent<PlayerScript>().nowMaterial - priceMaterialHouse;
@@ -119,7 +119,7 @@ public class BuyMenu : MonoBehaviour
     public void BuyFabric(){
         if(Place.collider){
             List<GameObject> Pcobjlst = new List<GameObject>(Place.collider.GetComponent<Place_script>().obj_list);
-            if(canBuyPlace(Pcobjlst, "Fabric")){
+            if(canBuyPlace(Pcobjlst, "Fabric",Place.collider.GetComponent<Place_script>().GetCoord())){
                 if(Cash-priceCashFabric>=0 && Material-priceMaterialFabric>=0){
                     Player.GetComponent<PlayerScript>().nowCash = Player.GetComponent<PlayerScript>().nowCash - priceCashFabric;
                     Player.GetComponent<PlayerScript>().nowMaterial = Player.GetComponent<PlayerScript>().nowMaterial - priceMaterialFabric;

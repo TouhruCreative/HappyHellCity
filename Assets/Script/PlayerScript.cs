@@ -40,8 +40,8 @@ public class PlayerScript : MonoBehaviour, IInteractable
         update_UI();
     }
     public void update_UI(){
-        TextCash.GetComponent<UnityEngine.UI.Text>().text=nowCash.ToString();
-        TextMaterial.GetComponent<UnityEngine.UI.Text>().text=nowMaterial.ToString();
+        TextCash.GetComponent<UnityEngine.UI.Text>().text=Math.Floor(nowCash).ToString();
+        TextMaterial.GetComponent<UnityEngine.UI.Text>().text=Math.Floor(nowMaterial).ToString();
         TextHappy.GetComponent<UnityEngine.UI.Text>().text=nowHappy.ToString();
     }
 }

@@ -30,6 +30,7 @@ public class BuildingFabric : MonoBehaviour, IBuilding
     {
         ModifOne=1.0f;
         priceUpgradeModifOne=1000.0f;
+        priceUpgradeModifTwo=1000.0f;
         Player = GameObject.FindWithTag("Player");
         PauseObject=GameObject.FindWithTag("PauseObject");
         efficiency_now=efficiency_max;

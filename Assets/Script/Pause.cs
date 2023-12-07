@@ -8,8 +8,7 @@ public class Pause : MonoBehaviour
     public GameObject PauseObject;
     public GameObject SettingsInPauseObject;
     void Start(){
-        PauseObject.SetActive(false);
-        SettingsInPauseObject.SetActive(false);
+        TimeGo();
     }
     void Update()
     {

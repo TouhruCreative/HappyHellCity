@@ -97,7 +97,6 @@ public class BuildingEconomic : MonoBehaviour, IBuilding
         InvokeRepeating("Add_Money", 0, ModifTwo);
         canGiveCash=true;
     }
-    
     private void StartPlaceEffect(){
         Destroy(pe);
     }
