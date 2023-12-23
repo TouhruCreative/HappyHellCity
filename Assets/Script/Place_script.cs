@@ -19,7 +19,7 @@ public class Place_script : MonoBehaviour, IInteractable
     }
     public string GetDescription()
     {
-        discription = "Name: "+namethis+"\n"+modifString;
+        discription = $"Name:\n{namethis}\n\n{modifString}";
         return discription;   
     }
     public void Interact(){

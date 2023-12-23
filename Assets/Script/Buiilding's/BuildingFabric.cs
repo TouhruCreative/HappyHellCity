@@ -45,7 +45,7 @@ public class BuildingFabric : MonoBehaviour, IBuilding
     void Update()
     {
         xy = gameObject.GetComponentInParent<Place_script>().GetCoord();
-        gameObject.GetComponentInParent<Place_script>().modifString="Effeciency: "+efficiency_now.ToString()+"\nPollution: "+pollution_now.ToString();
+        gameObject.GetComponentInParent<Place_script>().modifString="Effeciency:"+efficiency_now.ToString()+"\nPollution: "+pollution_now.ToString();
         Update_pollution();
         descUpgradeModiferOne= new List<string>{
             "Upgrade efficiency",

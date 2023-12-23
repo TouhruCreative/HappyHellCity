@@ -9,6 +9,9 @@ public class LoadScene : MonoBehaviour
 {
     public GameObject LoadingScreen;
     public Slider scale;
+    void Start(){
+        Time.timeScale = 1.0f;
+    }
     public void PlayNewGame(){
         PlayerPrefs.SetInt("NewGame",0);
         LoadingScreen.SetActive(true);

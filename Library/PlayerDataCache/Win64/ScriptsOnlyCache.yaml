@@ -31,10 +31,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -94,67 +92,67 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11590}
+      Script: {instanceID: 11600}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11604}
     - Class: 114
-      Script: {instanceID: 11598}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 11802}
     - Class: 114
-      Script: {instanceID: 12034}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 12086}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12352}
+      Script: {instanceID: 12380}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12414}
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12560}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12784}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12816}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12820}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13352}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13492}
     - Class: 114
-      Script: {instanceID: 13450}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 13476}
+      Script: {instanceID: 13528}
     - Class: 114
-      Script: {instanceID: 13534}
+      Script: {instanceID: 13586}
     - Class: 114
-      Script: {instanceID: 13562}
+      Script: {instanceID: 13614}
     - Class: 114
-      Script: {instanceID: 13574}
+      Script: {instanceID: 13626}
     - Class: 114
-      Script: {instanceID: 13702}
+      Script: {instanceID: 13764}
     - Class: 114
-      Script: {instanceID: 13942}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 14022}
     - Class: 114
-      Script: {instanceID: 13982}
+      Script: {instanceID: 14044}
     - Class: 114
-      Script: {instanceID: 14008}
+      Script: {instanceID: 14070}
     - Class: 114
-      Script: {instanceID: 14040}
+      Script: {instanceID: 14104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,49 +217,49 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11604}
     - Class: 114
-      Script: {instanceID: 11598}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 11918}
+      Script: {instanceID: 11932}
     - Class: 114
-      Script: {instanceID: 12034}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12122}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12784}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13100}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13440}
+      Script: {instanceID: 13492}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13738}
     - Class: 114
-      Script: {instanceID: 13702}
+      Script: {instanceID: 13764}
     - Class: 114
-      Script: {instanceID: 13828}
+      Script: {instanceID: 13890}
     - Class: 114
-      Script: {instanceID: 13942}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 14022}
     - Class: 114
-      Script: {instanceID: 13982}
+      Script: {instanceID: 14044}
     - Class: 114
-      Script: {instanceID: 14008}
+      Script: {instanceID: 14070}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1047,4 +1045,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Test v.1.unity
-  playerPath: D:/Proggraming/Unity project/Beta v.0.8.5.2/HappyHellCity.exe
+  playerPath: D:/Proggraming/Unity project/HappyHellCity v.0.8.6.1/HappyHellCity.exe
